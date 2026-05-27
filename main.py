@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import os
 import dotenv
-from dotenv import laod_dotenv
+from dotenv import load_dotenv
 
 load_dotenv()
 
