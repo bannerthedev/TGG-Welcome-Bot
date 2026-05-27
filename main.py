@@ -1,8 +1,13 @@
 import discord
 from discord.ext import commands
+import os
+import dotenv
+from dotenv import laod_dotenv
+
+load_dotenv()
+
 
 # === CONFIGURE THESE ===
-TOKEN = "MTUwOTMxNDQ0MTE0NDA0NTc0MA.GWGEAm.0iQpI8H-LR2-uT8UQyH1fF7-rIkq9h4YaPqMF4"
 
 WELCOME_CHANNEL_ID = 1401374600700629082  # welcome channel ID
 GOODBYE_CHANNEL_ID = 1509314470428541121  # goodbye channel ID
@@ -56,4 +61,4 @@ async def on_member_remove(member: discord.Member):
         except discord.HTTPException as e:
             print(f"Failed to add goodbye reaction: {e}")
 
-bot.run(TOKEN
+bot.run(os.getenv("TOKEN"))
